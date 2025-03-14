@@ -15,8 +15,9 @@ header, section, footer {
 }
 
 .my-heading {
-    font-size: 2.5em; /* Larger heading */
-    color: #fff;
+    font-size: 3.5em; /* Larger heading */
+    color: #FFF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Horizontal offset, vertical offset, blur radius, color */
 }
 
 .contact p {
@@ -29,7 +30,7 @@ header, section, footer {
     text-decoration: underline;
 }
 
-.objective-container, .education-container {
+.contact, .objective-container, .education-container {
     background-color: rgba(255, 255, 255, 0.1); /* Light background for the education section */
     padding: 20px; /* Padding inside the container */
     border-radius: 8px; /* Rounded corners */
@@ -60,6 +61,16 @@ ul {
 
 ul li {
     margin: 5px 0; /* Space between list items */
+}
+
+#backToTop {
+    background-color: #8B2DCA; /* Change to your desired background color */
+    color: white; /* Change text color */
+    padding: 10px 20px; /* Add padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    font-size: 16px; /* Modify font size */
+    transition: background-color 0.3s; /* Smooth transition */
 }
 
 .footer {
