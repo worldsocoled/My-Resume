@@ -1,79 +1,135 @@
+/* General Styles */
 body {
     background: linear-gradient(to right, hsl(293, 60%, 57%), #ff69b4);
-    margin: 40px; /* Moves the border inward */
-    padding: 20px; /* Adds space inside the border */
-    border: 5px solid white; /* Creates the border */
-    box-sizing: border-box; /* Ensures padding doesn't increase width */
+    margin: 20px; /* Reduced margin for smaller screens */
+    padding: 15px;
+    border: 5px solid white;
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     color: white;
-    line-height: 1.6; /* Improved readability */
+    line-height: 1.6;
 }
 
+/* Centering and Spacing */
 header, section, footer {
     text-align: center;
-    margin-bottom: 20px; /* Space between sections */
+    margin-bottom: 20px;
 }
 
+/* Responsive Heading */
 .my-heading {
-    font-size: 3.5em; /* Larger heading */
+    font-size: 2.5em; /* Adjusted for better scaling */
     color: #FFF;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Horizontal offset, vertical offset, blur radius, color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-.contact p {
-    font-weight: 800;
-    padding-bottom: 5%;
-}
-
-
-.obj, .edu, .skills {
-    text-decoration: underline;
-}
-
+/* Contact and Section Containers */
 .contact, .objective-container, .education-container {
-    background-color: rgba(255, 255, 255, 0.1); /* Light background for the education section */
-    padding: 20px; /* Padding inside the container */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    margin: 0 auto; /* Center the container */
-    max-width: 600px; /* Limit the width for better readability */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    max-width: 90%; /* Ensures it fits smaller screens */
 }
 
+/* Skills Container - Adjust for Mobile */
 .skills-container {
     display: flex;
-    justify-content: center; /* Center the skills sections */
-    gap: 20px; /* Space between the skill sets */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    justify-content: center;
+    gap: 15px;
 }
 
+/* Skills Sections */
 .technical-skills, .soft-skills {
-    background-color: rgba(255, 255, 255, 0.1); /* Light background for skills sections */
-    padding: 20px;
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Full width on mobile */
+    max-width: 400px; /* Limit width on larger screens */
 }
 
+/* Lists */
 ul {
-    list-style-type: none; /* Remove default bullets */
-    padding: 0; /* Reset padding */
-    margin: 0 auto; /* Center the list */
-    text-align: left; /* Align text within the list */
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    text-align: left;
 }
 
 ul li {
-    margin: 5px 0; /* Space between list items */
+    margin: 5px 0;
 }
 
+/* Responsive Back-to-Top Button */
 #backToTop {
-    background-color: #8B2DCA; /* Change to your desired background color */
-    color: white; /* Change text color */
-    padding: 10px 20px; /* Add padding */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Change cursor on hover */
-    font-size: 16px; /* Modify font size */
-    transition: background-color 0.3s; /* Smooth transition */
+    background-color: #8B2DCA;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
+/* Footer */
 .footer {
     font-weight: 800;
     padding-top: 20px;
+}
+
+/* ============================= */
+/* 🌟 MOBILE RESPONSIVENESS 🌟 */
+/* ============================= */
+
+@media screen and (max-width: 768px) {
+    body {
+        margin: 10px; /* Smaller margins on mobile */
+        padding: 10px;
+    }
+
+    .my-heading {
+        font-size: 2em; /* Reduce heading size */
+    }
+
+    .skills-container {
+        flex-direction: column; /* Stack skills vertically */
+        align-items: center;
+    }
+
+    .technical-skills, .soft-skills {
+        width: 90%; /* Make skills sections wider on mobile */
+        max-width: none;
+    }
+
+    .contact, .objective-container, .education-container {
+        max-width: 95%; /* Adjust width for better scaling */
+        padding: 10px;
+    }
+
+    #backToTop {
+        font-size: 14px; /* Smaller button text */
+        padding: 8px 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .my-heading {
+        font-size: 1.8em; /* Further reduce heading size */
+    }
+
+    body {
+        font-size: 14px; /* Reduce text size slightly */
+    }
+
+    .contact, .objective-container, .education-container {
+        padding: 8px;
+    }
+
+    #backToTop {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
 }
