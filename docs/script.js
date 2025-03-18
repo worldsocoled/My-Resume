@@ -13,6 +13,6 @@ window.onscroll = function() {
     }
 };
 // Scroll to the top smoothly when button is clicked
-document.getElementById('back-to-top-button').addEventListener('click', function() {
+document.getElementById('backToTop').addEventListener('click', function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
