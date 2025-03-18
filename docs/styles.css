@@ -15,6 +15,7 @@ header, section, footer {
     margin-bottom: 20px;
 }
 
+/*underline the headings above the sections*/
 .obj,.edu,.skills {
     text-decoration: underline;
 }
@@ -53,6 +54,11 @@ header, section, footer {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     width: 100%; /* Full width on mobile */
     max-width: 400px; /* Limit width on larger screens */
+}
+
+.highlight {
+    background-color: #d3d3d3; /* Use any color to indicate highlighting */
+    transition: background-color 0.3s;
 }
 
 .email-link {
