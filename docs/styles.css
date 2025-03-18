@@ -57,7 +57,7 @@ header, section, footer {
 }
 
 .highlight {
-    background-color: #d3d3d3; /* Use any color to indicate highlighting */
+    background-color: #7f099c; /* Use any color to indicate highlighting */
     transition: background-color 0.3s;
 }
 
