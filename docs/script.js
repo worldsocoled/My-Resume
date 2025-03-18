@@ -12,8 +12,7 @@ window.onscroll = function() {
         button.style.display = "none";
     }
 };
-
-document.getElementById('backToTop').onclick = function() {
-    document.body.scrollTop = 0; 
-    document.documentElement.scrollTop = 0; 
-};
+// Scroll to the top smoothly when button is clicked
+document.getElementById('back-to-top-button').addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
