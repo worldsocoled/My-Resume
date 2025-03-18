@@ -2,8 +2,7 @@
 body {
     background: linear-gradient(to right, hsl(293, 60%, 57%), #ff69b4);
     margin: 20px; /* Reduced margin for smaller screens */
-    padding: 15px;
-    border: 5px solid white;
+    padding: 20px;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     color: white;
@@ -16,18 +15,23 @@ header, section, footer {
     margin-bottom: 20px;
 }
 
+.obj,.edu,.skills {
+    text-decoration: underline;
+}
+
 /* Responsive Heading */
 .my-heading {
     font-size: 2.5em; /* Adjusted for better scaling */
     color: #FFF;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    padding-bottom: 5%;
 }
 
 /* Contact and Section Containers */
 .contact, .objective-container, .education-container {
     background-color: rgba(255, 255, 255, 0.1);
     padding: 15px;
-    border-radius: 8px;
+    border-radius: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     margin: 0 auto;
     max-width: 90%; /* Ensures it fits smaller screens */
@@ -51,6 +55,23 @@ header, section, footer {
     max-width: 400px; /* Limit width on larger screens */
 }
 
+.email-link {
+    color: white; /* Default color */
+}
+
+.email-link:hover {
+    color: rgb(130, 24, 192); /* Color when hovering over the link */
+    background-color: white; /* Background color when hovering */
+    padding: 5px; /* Add some padding for better appearance */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.email-link:active {
+    color: white; /* Color when the link is active (clicked) */
+    background-color: white; /* Background color when active */
+}
+
+
 /* Lists */
 ul {
     list-style-type: none;
@@ -72,6 +93,11 @@ ul li {
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s;
+}
+
+/*Social media icons,Linkedin and Github*/
+.social-icon, .social-icon2 {
+    margin: 0 10px; /* Add horizontal margin to separate the icons */
 }
 
 /* Footer */
