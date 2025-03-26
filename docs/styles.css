@@ -1,11 +1,11 @@
 /* Global Styles */
 body {
-    color: white;
-    background: black;
-    margin: 15%;
+    margin: 0; /* Reset margin to avoid overflow */
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    padding: 0 20px;
+    color: white;
+    background: black;
+    padding: 0 2%; /* Use percentage for responsiveness */
 }
 
 .header {
@@ -16,6 +16,8 @@ body {
     background: radial-gradient(circle, rgba(117,139,254,1) 0%, rgba(205,144,255,1) 100%);
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 800px; /* Set max width for header */
+    margin: 0 auto; /* Center the header */
 }
 
 .h2, .h3 {
@@ -24,7 +26,9 @@ body {
 
 .section {
     text-align: center;
-    padding-top: 10%;
+    padding: 10% 0; /* Adjusted padding for vertical spacing */
+    max-width: 800px; /* Set max width for sections */
+    margin: 0 auto; /* Center the sections */
 }
 
 /* Remove bullet points from unordered lists */
@@ -35,22 +39,21 @@ ul {
 }
 
 /* social media links and logos */
-
 .social-section {
-    text-align: center; /* Center-aligns text and inline elements within the section */
-    margin: 20px 0;    /* Adds vertical spacing around the section */
+    text-align: center; /* Center-aligns text */
+    margin: 20px 0;    /* Adds vertical spacing */
     padding-top: 10%;
 }
 
 .social-media-links {
     display: flex;             /* Use Flexbox for alignment */
-    justify-content: center;   /* Centers the child items */
+    justify-content: center;   /* Centers the icons */
     gap: 10px;                /* Adds spacing between the icons */
-    flex-wrap: wrap;          /* Allows wrapping of icons if the screen is small */
+    flex-wrap: wrap;          /* Allows wrapping on small screens */
 }
 
 .social-svg {
-    transition: transform 0.3s; /* Optional: Adds a scale animation for hover effect */
+    transition: transform 0.3s; /* Optional: Adds hover effect */
 }
 
 .social-svg:hover {
@@ -59,6 +62,7 @@ ul {
 
 .footer {
     text-align: center;
+    padding: 10px 0; /* Add some padding to the footer */
 }
 
 .name {
@@ -67,15 +71,34 @@ ul {
 
 /* Styles for the Back to Top Button */
 #backToTop {
-    display: inline-block;        /* Ensures it's treated like a button */
-    background: linear-gradient(to right, #6a11cb, #2575fc); /* Purple to blue gradient */
-    color: white;                /* Text color that contrasts well with the gradient */
-    border: none;                /* Removes default border */
-    border-radius: 5px;         /* Rounded corners */
-    padding: 10px 15px;         /* Padding for space inside button */
-    font-size: 16px;            /* Button text size */
-    cursor: pointer;             /* Cursor changes to pointer on hover */
-    transition: background 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+    display: inline-block; /* Treats it like a button */
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background */
+    color: white; /* Contrast text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding for button */
+    font-size: 16px; /* Button text size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+#backToTop:hover {
+    background: linear-gradient(to right, #2575fc, #6a11cb); /* Reverse gradient on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    .header, .section {
+        padding: 5%; /* Reduce padding on small screens */
+    }
+    .name {
+        font-size: 2em; /* Adjust font size */
+    }
+    .social-svg {
+        width: 48px; /* Smaller icons on small screens */
+        height: 48px;
+    }
 }
 
 #backToTop:hover {
