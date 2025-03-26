@@ -1,167 +1,84 @@
-/* General Styles */
+/* Global Styles */
 body {
-    background: linear-gradient(to right, hsl(293, 60%, 57%), #ff69b4);
-    margin: 20px; /* Reduced margin for smaller screens */
-    padding: 20px;
-    box-sizing: border-box;
+    margin: 15%;
     font-family: 'Roboto', sans-serif;
-    color: white;
     line-height: 1.6;
+    color: white;
+    background: black;
+    padding: 0 20px;
 }
 
-/* Centering and Spacing */
-header, section, footer {
+.header {
     text-align: center;
-    margin-bottom: 20px;
+    color: black;
+    padding: 20px;
+    background: rgb(117,139,254);
+    background: radial-gradient(circle, rgba(117,139,254,1) 0%, rgba(205,144,255,1) 100%);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/*underline the headings above the sections*/
-.obj,.edu,.skills {
+.h2, .h3 {
     text-decoration: underline;
 }
 
-/* Responsive Heading */
-.my-heading {
-    font-size: 2.5em; /* Adjusted for better scaling */
-    color: #FFF;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    padding-bottom: 5%;
+.section {
+    text-align: center;
+    padding-top: 10%;
 }
 
-/* Contact and Section Containers */
-.contact, .objective-container, .education-container {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 15px;
-    border-radius: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    margin: 0 auto;
-    max-width: 90%; /* Ensures it fits smaller screens */
-}
-
-/* Skills Container - Adjust for Mobile */
-.skills-container {
-    display: flex;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
-    justify-content: center;
-    gap: 15px;
-}
-
-/* Skills Sections */
-.technical-skills, .soft-skills {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    width: 100%; /* Full width on mobile */
-    max-width: 400px; /* Limit width on larger screens */
-}
-
-.highlight {
-    background-color: #7f099c; /* Use any color to indicate highlighting */
-    transition: background-color 0.3s;
-}
-
-.email-link {
-    color: white; /* Default color */
-}
-
-.email-link:hover {
-    color: rgb(130, 24, 192); /* Color when hovering over the link */
-    background-color: white; /* Background color when hovering */
-    padding: 5px; /* Add some padding for better appearance */
-    border-radius: 5px; /* Rounded corners */
-}
-
-.email-link:active {
-    color: white; /* Color when the link is active (clicked) */
-    background-color: white; /* Background color when active */
-}
-
-
-/* Lists */
+/* Remove bullet points from unordered lists */
 ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0 auto;
-    text-align: left;
+    list-style-type: none; /* Removes bullet points */
+    padding: 0;           /* Removes default padding */
+    margin: 0;            /* Removes default margin */
 }
 
-ul li {
-    margin: 5px 0;
+/* social media links and logos */
+
+.social-section {
+    text-align: center; /* Center-aligns text and inline elements within the section */
+    margin: 20px 0;    /* Adds vertical spacing around the section */
+    padding-top: 10%;
 }
 
-/* Responsive Back-to-Top Button */
-#backToTop {
-    background-color: #8B2DCA;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
+.social-media-links {
+    display: flex;             /* Use Flexbox for alignment */
+    justify-content: center;   /* Centers the child items */
+    gap: 10px;                /* Adds spacing between the icons */
+    flex-wrap: wrap;          /* Allows wrapping of icons if the screen is small */
 }
 
-/*Social media icons,Linkedin and Github*/
-.social-icon, .social-icon2 {
-    margin: 0 10px; /* Add horizontal margin to separate the icons */
+.social-svg {
+    transition: transform 0.3s; /* Optional: Adds a scale animation for hover effect */
 }
 
-/* Footer */
+.social-svg:hover {
+    transform: scale(1.1); /* Optional: Slightly enlarges icon on hover */
+}
+
 .footer {
-    font-weight: 800;
-    padding-top: 20px;
+    text-align: center;
 }
 
-/* ============================= */
-/* 🌟 MOBILE RESPONSIVENESS 🌟 */
-/* ============================= */
-
-@media screen and (max-width: 768px) {
-    body {
-        margin: 10px; /* Smaller margins on mobile */
-        padding: 10px;
-    }
-
-    .my-heading {
-        font-size: 2em; /* Reduce heading size */
-    }
-
-    .skills-container {
-        flex-direction: column; /* Stack skills vertically */
-        align-items: center;
-    }
-
-    .technical-skills, .soft-skills {
-        width: 90%; /* Make skills sections wider on mobile */
-        max-width: none;
-    }
-
-    .contact, .objective-container, .education-container {
-        max-width: 95%; /* Adjust width for better scaling */
-        padding: 10px;
-    }
-
-    #backToTop {
-        font-size: 14px; /* Smaller button text */
-        padding: 8px 15px;
-    }
+.name {
+    font-size: 2.5em;
 }
 
-@media screen and (max-width: 480px) {
-    .my-heading {
-        font-size: 1.8em; /* Further reduce heading size */
-    }
+/* Styles for the Back to Top Button */
+#backToTop {
+    display: inline-block;        /* Ensures it's treated like a button */
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Purple to blue gradient */
+    color: white;                /* Text color that contrasts well with the gradient */
+    border: none;                /* Removes default border */
+    border-radius: 5px;         /* Rounded corners */
+    padding: 10px 15px;         /* Padding for space inside button */
+    font-size: 16px;            /* Button text size */
+    cursor: pointer;             /* Cursor changes to pointer on hover */
+    transition: background 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
 
-    body {
-        font-size: 14px; /* Reduce text size slightly */
-    }
-
-    .contact, .objective-container, .education-container {
-        padding: 8px;
-    }
-
-    #backToTop {
-        font-size: 12px;
-        padding: 6px 12px;
-    }
+#backToTop:hover {
+    background: linear-gradient(to right, #2575fc, #6a11cb); /* Reverse gradient on hover */
+    transform: scale(1.05); /* Slightly enlarges button on hover */
 }
