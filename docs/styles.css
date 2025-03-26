@@ -12,8 +12,8 @@ body {
     text-align: center;
     color: black;
     padding: 20px;
-    background: rgb(117,139,254);
-    background: radial-gradient(circle, rgba(117,139,254,1) 0%, rgba(205,144,255,1) 100%);
+    background: rgb(254,179,243);
+    background: linear-gradient(90deg, rgba(254,179,243,1) 0%, rgba(224,179,254,1) 50%, rgba(179,254,242,1) 100%);
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
