@@ -26,7 +26,6 @@ body {
 
 .section {
     text-align: center;
-    padding: 10% 0; /* Keep vertical padding */
     margin: 0; /* Reset margin to avoid unwanted spacing */
     max-width: 800px;
 }
