@@ -26,13 +26,10 @@ body {
 
 .section {
     text-align: center;
-    max-width: 800px; /* Set max width for sections */
+    padding: 10% 0; /* Keep vertical padding */
+    margin: 0; /* Reset margin to avoid unwanted spacing */
+    max-width: 800px;
     margin: 0 auto; /* Center the sections */
-}
-
-#objective, #education, #skills, #social-links {
-    margin-top: 0; /* Remove top margin */
-    margin-bottom: 0; /* Remove bottom margin */
 }
 
 /* Remove bullet points from unordered lists */
