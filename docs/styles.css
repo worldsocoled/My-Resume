@@ -26,7 +26,6 @@ body {
 
 .section {
     text-align: center;
-    padding: 0; /* Adjusted padding for vertical spacing */
     max-width: 800px; /* Set max width for sections */
     margin: 0 auto; /* Center the sections */
 }
