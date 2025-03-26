@@ -28,6 +28,7 @@ body {
     text-align: center;
     margin: 0; /* Reset margin to avoid unwanted spacing */
     max-width: 800px;
+    margin: 0 auto; /* Center the sections */
 }
 
 /* Remove bullet points from unordered lists */
