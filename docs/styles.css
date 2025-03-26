@@ -30,6 +30,11 @@ body {
     margin: 0 auto; /* Center the sections */
 }
 
+#objective, #education, #skills, #social-links {
+    margin-top: 0; /* Remove top margin */
+    margin-bottom: 0; /* Remove bottom margin */
+}
+
 /* Remove bullet points from unordered lists */
 ul {
     list-style-type: none; /* Removes bullet points */
